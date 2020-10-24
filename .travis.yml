@@ -1,0 +1,18 @@
+language: node_js
+
+node_js:
+  - 12
+
+stages:
+  - test
+  - name: deploy
+    if: branch == main
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - yarn test:full
+    - stage: deploy
+      script:
+        - yarn deploy
