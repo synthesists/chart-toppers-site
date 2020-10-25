@@ -2,10 +2,10 @@
 
 context("sample", () => {
   beforeEach(() => {
-    cy.visit("localhost:3000");
+    cy.visit("");
   });
 
   it("should have title text", () => {
-    cy.contains("Chart Toppers");
+    cy.contains("ChartToppers");
   });
 });

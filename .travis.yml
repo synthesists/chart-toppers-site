@@ -1,5 +1,10 @@
 language: node_js
 
+cache:
+  npm: true
+  directories:
+    - ~/.cache
+
 node_js:
   - 12
 
