@@ -32,6 +32,7 @@ jobs:
         - yarn deploy
     - stage: test-e2e
       script:
+        - yarn cypress install
         - yarn test:e2e
     - stage: deploy-prod
       env: ENVIRONMENT=prod
