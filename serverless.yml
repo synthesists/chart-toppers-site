@@ -1,7 +1,0 @@
-site:
-  component: "@sls-next/serverless-component@1.17"
-  inputs:
-    bucketName: ${env.DEPLOYMENT_BUCKET}
-    cloudfront:
-      distributionId: ${env.CLOUDFRONT_DISTRIBUTION_ID}
-      

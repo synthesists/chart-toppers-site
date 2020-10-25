@@ -6,7 +6,6 @@ context("sample", () => {
   });
 
   it("should have title text", () => {
-    // https://on.cypress.io/window
     cy.contains("Chart Toppers");
   });
 });

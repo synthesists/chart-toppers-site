@@ -43,8 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test:full",
-      "pre-push": "yarn test:full"
+      "pre-commit": "yarn test:full"
     }
   },
   "dependencies": {

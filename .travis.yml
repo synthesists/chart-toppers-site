@@ -4,15 +4,26 @@ node_js:
   - 12
 
 stages:
-  - test
-  - name: deploy
+  - test unit
+  - name: deploy-test
+    if: (branch == main) AND (type == pull_request)
+  - name: test-e2e
+    if: (branch == main) AND (type == pull_request)
+  - name: deploy-prod
     if: (branch == main) AND (type != pull_request)
 
 jobs:
   include:
-    - stage: test
+    - stage: test unit
       script:
-        - yarn test:full
-    - stage: deploy
+        - yarn test:coverage
+    - stage: deploy-test
+      script:
+        - yarn deploy
+    - stage: test-e2e
+      script:
+        - yarn test:e2e
+    - stage: deploy-prod
+      env: ENVIRONMENT=prod
       script:
         - yarn deploy
