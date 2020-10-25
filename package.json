@@ -14,7 +14,7 @@
     "test": "yarn test:unit && yarn test:e2e",
     "test:coverage": "yarn test:unit --coverage",
     "test:watch": "yarn test:unit --watchAll",
-    "test:full": "yarn lint && yarn test:coverage"
+    "test:full": "yarn lint && yarn test:coverage && yarn test:e2e"
   },
   "license": "MIT",
   "devDependencies": {
