@@ -6,6 +6,6 @@ context("sample", () => {
   });
 
   it("should have title text", () => {
-    cy.contains("ChartToppers");
+    cy.contains("Chart Toppers");
   });
 });

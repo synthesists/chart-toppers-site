@@ -6,5 +6,5 @@ import Homepage from "../../../src/pages";
 it('should render "Chart Toppers"', () => {
   render(<Homepage />);
 
-  expect(screen.getByText("ChartToppers"));
+  expect(screen.getByText("Chart Toppers"));
 });
