@@ -25,6 +25,8 @@ module.exports = {
     "@typescript-eslint/no-var-requires": ["off", { extensions: [".js"] }],
     "import/no-unresolved": "off",
     "no-useless-return": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["off"],
   },
   settings: {
     react: {
