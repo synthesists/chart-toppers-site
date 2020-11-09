@@ -3,7 +3,7 @@ module.exports = {
   collectCoverage: false,
   collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/node_modules/**", "!**/vendor/**"],
   coverageDirectory: "reports/coverage",
-  coveragePathIgnorePatterns: ["/node_modules/", "src/components/examples"],
+  coveragePathIgnorePatterns: ["/node_modules/", "src/pages/_app.tsx"],
   coverageThreshold: {
     global: {
       branches: 0,
@@ -21,6 +21,7 @@ module.exports = {
     functions: 0,
     lines: 0,
   },
+  setupFilesAfterEnv: ["./tests/setup-tests.ts"],
   preset: "ts-jest",
   testPathIgnorePatterns: ["/node_modules/", "/tests/e2e/"],
   transform: {

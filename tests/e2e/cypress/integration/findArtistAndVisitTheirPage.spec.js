@@ -1,0 +1,13 @@
+/// <reference types="cypress" />
+
+context("sample", () => {
+  beforeEach(() => {
+    cy.visit("");
+  });
+
+  it("should have title text", () => {
+    cy.get("input").type("Kanye west");
+    cy.get("a").contains("Kanye West").trigger("mouseover").click();
+    cy.url().should("include", "/artists/5K4W6rqBFWDnAN6FQUkS6x/chart");
+  });
+});
