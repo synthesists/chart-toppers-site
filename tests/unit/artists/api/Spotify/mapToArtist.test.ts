@@ -1,5 +1,5 @@
-import { mapToArtist } from "../../../../src/artists/api/adapters/Spotify/mapToArtist";
-import { Artist } from "./../../../../src/artists/data/artist";
+import { mapToArtist } from "../../../../../src/artists/api/adapters/Spotify/mapToArtist";
+import { Artist } from "../../../../../src/artists/data/artist";
 
 const spotifyArtist = {
   id: "artist-id",
@@ -30,6 +30,7 @@ describe("mapToArtist", () => {
       },
     });
   });
+
   it("should map the Spotify response to an Artist with no image", () => {
     const artist: Artist = mapToArtist(spotifyArtistWithNoImage);
 

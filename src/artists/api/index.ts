@@ -5,7 +5,7 @@ import {
 } from "./adapters/Spotify/spotify-content-api";
 
 export type SearchArtists = (query: string) => Promise<Artist[]>;
-export const searchArtists = searchArtistsFromSpotify;
+export const searchArtists: SearchArtists = searchArtistsFromSpotify;
 
 export type GetTopArtists = () => Promise<Artist[]>;
-export const getTopArtists = getTopArtistsFromSpotify;
+export const getTopArtists: GetTopArtists = getTopArtistsFromSpotify;

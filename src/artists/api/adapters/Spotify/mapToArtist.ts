@@ -1,9 +1,16 @@
-import { Artist } from "src/artists/data/artist";
+import { Image, Artist } from "../../../data/artist";
 
-export const mapToArtist = (artist: any): Artist => {
+const maptoImage = (images: any): Image | null => {
+  if (images.length === 0) {
+    return null;
+  }
   return {
-    name: artist.name,
-    id: artist.id,
-    image: artist.images[0] ? { url: artist.images[0].url } : null,
+    url: images[0].url,
   };
 };
+
+export const mapToArtist = ({ name, id, images }: any): Artist => ({
+  name,
+  id,
+  image: maptoImage(images),
+});
