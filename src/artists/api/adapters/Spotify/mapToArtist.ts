@@ -1,4 +1,4 @@
-import { Image, Artist } from "../../../data/artist";
+import { Image, Artist } from "../../../data/Artist";
 
 const maptoImage = (images: any): Image | null => {
   if (images.length === 0) {

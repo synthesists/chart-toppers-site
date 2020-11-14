@@ -1,4 +1,4 @@
-import { Artist } from "../data/artist";
+import { Artist } from "../data/Artist";
 import {
   searchArtists as searchArtistsFromSpotify,
   getTopArtists as getTopArtistsFromSpotify,

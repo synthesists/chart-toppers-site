@@ -1,4 +1,4 @@
-import { Artist, Image } from "../../../src/artists/data/artist";
+import { Artist, Image } from "../../../src/artists/data/Artist";
 
 export const assertIsImage = (image: Image): void => {
   expect(image).toEqual({
