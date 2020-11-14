@@ -1,6 +1,6 @@
 import fc from "fast-check";
-import { mapToArtist } from "../../../../../src/artists/api/adapters/Spotify/mapToArtist";
-import { Artist } from "../../../../../src/artists/data/Artist";
+import { mapToArtist } from "../../../../../src/Artists/api/adapters/Spotify/mapToArtist";
+import { Artist } from "../../../../../src/Artists/data/Artist";
 import { generateArtist } from "../../../../helpers/generators/Artist";
 import { assertIsArtist } from "../../../../helpers/matchers/Artist";
 

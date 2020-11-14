@@ -1,5 +1,5 @@
 import React from "react";
-import { Story } from "@storybook/react/types-6-0.d";
+import { Story } from "@storybook/react/types-6-0";
 import ArtistCard from "./ArtistCard";
 import { createFakeArtist } from "../../../tests/helpers/factories/Artist";
 

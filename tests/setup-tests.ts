@@ -1,4 +1,4 @@
 import "@testing-library/jest-dom";
 import "./helpers/matchers";
 
-jest.mock("../src/artists/api");
+jest.mock("../src/Artists/api");

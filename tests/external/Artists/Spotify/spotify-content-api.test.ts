@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getTopArtists, searchArtists } from "../../../../src/artists/api/adapters/Spotify/spotify-content-api";
+import { getTopArtists, searchArtists } from "../../../../src/Artists/api/adapters/Spotify/spotify-content-api";
 import { assertIsArtist } from "../../../helpers/matchers/Artist";
 
 const spyOnGetRequest = jest.spyOn(axios, "get");

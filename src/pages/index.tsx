@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { NextPage } from "next";
-import { Artist } from "../artists/data/Artist";
-import ArtistCard from "../artists/components/ArtistCard";
-import { searchArtists, getTopArtists } from "../artists/api";
+import { Artist } from "../Artists/data/Artist";
+import ArtistCard from "../Artists/components/ArtistCard";
+import { searchArtists, getTopArtists } from "../Artists/api";
 import Input from "../elements/Input";
 import HeroBanner from "../components/HeroBanner";
 

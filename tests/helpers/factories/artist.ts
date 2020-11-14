@@ -1,5 +1,5 @@
 import faker from "faker";
-import { Artist } from "../../../src/artists/data/Artist";
+import { Artist } from "../../../src/Artists/data/Artist";
 
 export const createFakeArtist = (): Artist => ({
   name: `The ${faker.hacker.adjective()} ${faker.company.bsNoun()}`,
