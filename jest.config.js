@@ -3,7 +3,7 @@ module.exports = {
   collectCoverage: false,
   collectCoverageFrom: ["src/**/*.{ts,tsx}", "!**/node_modules/**", "!**/vendor/**"],
   coverageDirectory: "reports/coverage",
-  coveragePathIgnorePatterns: ["/node_modules/", "src/pages/_app.tsx"],
+  coveragePathIgnorePatterns: ["/node_modules/", "src/pages/_app.tsx", ".story.tsx"],
   coverageThreshold: {
     global: {
       branches: 0,

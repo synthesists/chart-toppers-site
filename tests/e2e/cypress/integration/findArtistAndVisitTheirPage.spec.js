@@ -1,6 +1,4 @@
-/// <reference types="cypress" />
-
-context("sample", () => {
+context("findArtistAndVisitTheirPage", () => {
   beforeEach(() => {
     cy.visit("");
   });

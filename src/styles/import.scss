@@ -3,3 +3,10 @@
 body {
   background-color: black;
 }
+
+*:focus {
+  outline: none;
+}
+* {    
+  margin: 0;
+}

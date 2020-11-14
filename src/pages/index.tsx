@@ -1,8 +1,10 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NextPage } from "next";
-import { Artist } from "../artists/data/artist";
-import ArtistCard from "../artists/components/ArtistCard";
-import { searchArtists, getTopArtists } from "../artists/api";
+import { Artist } from "../Artists/data/Artist";
+import ArtistCard from "../Artists/components/ArtistCard";
+import { searchArtists, getTopArtists } from "../Artists/api";
+import Input from "../elements/Input";
+import HeroBanner from "../components/HeroBanner";
 
 const Page: NextPage = () => {
   const [artists, setArtists] = useState<Artist[]>([]);
@@ -11,11 +13,15 @@ const Page: NextPage = () => {
     getTopArtists().then(setArtists);
   }, []);
 
-  const onInputChange = (e: ChangeEvent<HTMLInputElement>) => searchArtists(e.target.value).then(setArtists);
+  const handleInputChange = (query: string): void => {
+    searchArtists(query).then(setArtists);
+  };
 
   return (
     <>
-      <input aria-label="Search artists" onChange={onInputChange} />
+      <HeroBanner>
+        <Input handleChange={handleInputChange} />
+      </HeroBanner>
       <section role="list" className="card-grid">
         {artists.map((artist) => (
           <ArtistCard artist={artist} key={artist.id} />
