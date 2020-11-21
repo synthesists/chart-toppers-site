@@ -3,6 +3,8 @@ import { Artist, Image } from "../../../src/Artists/data/Artist";
 export const assertIsImage = (image: Image): void => {
   expect(image).toEqual({
     url: expect.any(String),
+    width: expect.any(Number),
+    height: expect.any(Number),
   });
 };
 

@@ -1,18 +1,13 @@
 import { Image, Artist } from "../../../data/Artist";
 
-const maptoImages = (images: any[]): Image[] => {
-  if (images.length === 0) {
-    return [];
-  }
-  return [
-    {
-      url: images[0].url,
-    },
-  ];
-};
+const maptoImage = (image: any): Image => ({
+  url: image.url,
+  width: image.width,
+  height: image.height,
+});
 
 export const mapToArtist = ({ name, id, images }: any): Artist => ({
   name,
   id,
-  images: maptoImages(images),
+  images: images.map(maptoImage),
 });
