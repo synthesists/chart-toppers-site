@@ -3,17 +3,13 @@
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 20px 20px;
   padding: 10px;
-  
-  > .c-card {
-    width: unset;
-  }
 }
 
 .c-card {
   $self: &;
   background-color: rgb(50, 8, 63);
   position: relative;
-  height: 12rem;
+  height: 220px;
 
   #{$self}__inner {
     position: absolute;
@@ -24,11 +20,12 @@
     display: flex;
     align-items: flex-end;
     background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.2));
+
+    box-sizing: border-box;
+    padding: 25px;
   }
 
   #{$self}__title {
-    padding: 25px;
-    margin-top: auto;
     color: white;
     font-size: 24px;
   }
