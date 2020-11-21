@@ -5,5 +5,5 @@ export type Image = {
 export type Artist = {
   name: string;
   id: string;
-  image: Image | null;
+  images: Image[];
 };
