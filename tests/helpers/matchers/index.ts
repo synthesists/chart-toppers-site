@@ -18,4 +18,15 @@ expect.extend({
   },
 });
 
+expect.extend({
+  toBeArrayOf(received: any[], matcher) {
+    const pass = received.every((element) => matcher.asymmetricMatch(element));
+
+    return {
+      message: (): string => `expected every element in ${received} to match pass the matcher`,
+      pass,
+    };
+  },
+});
+
 export {};
