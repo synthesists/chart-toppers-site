@@ -3,7 +3,7 @@ import {
   getTopArtists,
   searchArtists,
   getArtist,
-} from "../../../../src/Artists/api/adapters/Spotify/spotify-content-api";
+} from "../../../../src/Artists/api/adapters/Spotify/spotifyArtistsApi";
 import { assertIsArtist } from "../../../helpers/matchers/Artist";
 
 const spyOnGetRequest = jest.spyOn(axios, "get");

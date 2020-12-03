@@ -3,7 +3,7 @@ import {
   searchArtists as searchArtistsFromSpotify,
   getTopArtists as getTopArtistsFromSpotify,
   getArtist as getArtistFromSpotify,
-} from "./adapters/Spotify/spotify-content-api";
+} from "./adapters/Spotify/spotifyArtistsApi";
 
 export type SearchArtists = (query: string) => Promise<Artist[]>;
 export const searchArtists: SearchArtists = searchArtistsFromSpotify;
