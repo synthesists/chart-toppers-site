@@ -7,7 +7,7 @@ type Props = {
 };
 
 const ArtistCard: React.FC<Props> = ({ artist }: Props) => (
-  <Link href={`/artists/${artist.id}/chart`}>
+  <Link href={`/artists/${artist.id}`}>
     <a className={"c-card"} aria-label={artist.name}>
       <div className="c-card__image-container">
         {artist.images.length > 0 && <img src={artist.images[0].url} alt={artist.name} />}
