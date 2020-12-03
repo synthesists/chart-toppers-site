@@ -7,6 +7,10 @@ import { mapToTrack } from "./mapToTrack";
 
 export const getTrack: GetTrack = async (id: string): Promise<Track> => {
   const url = URI(SPOTIFY_API_URL).segment("tracks").segment(id).toString();
-  const { data } = await Axios.get(url);
-  return mapToTrack(data);
+  try {
+    const { data } = await Axios.get(url);
+    return mapToTrack(data);
+  } catch (error) {
+    throw new Error(`Track with ID "${id}" not found`);
+  }
 };

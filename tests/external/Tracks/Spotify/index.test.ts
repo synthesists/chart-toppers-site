@@ -1,4 +1,4 @@
-import { getTrack } from "../../../../src/Tracks/api/adapters/Spotify/spotifyTracksApi";
+import { getTrack } from "../../../../src/Tracks/api/adapters/Spotify";
 import { assertIsTrack } from "../../../helpers/matchers/Track";
 
 describe("getTrack", () => {
