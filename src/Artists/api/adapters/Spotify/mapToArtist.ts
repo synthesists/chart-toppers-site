@@ -1,10 +1,5 @@
-import { Image, Artist } from "../../../data/Artist";
-
-const maptoImage = (image: any): Image => ({
-  url: image.url,
-  width: image.width,
-  height: image.height,
-});
+import { Artist } from "../../../data/Artist";
+import { maptoImage } from "../../../../api/adapters/Spotify/mapToImage";
 
 export const mapToArtist = ({ name, id, images }: any): Artist => ({
   name,

@@ -4,38 +4,40 @@ import { assertIsArtist } from "../../../helpers/matchers/Artist";
 
 const spyOnGetRequest = jest.spyOn(axios, "get");
 
-describe("searchArtists", () => {
-  it("should not search for an empty string", async () => {
-    const artists = await searchArtists("");
+describe("Spotify Artist Adapter", () => {
+  describe("searchArtists", () => {
+    it("should not search for an empty string", async () => {
+      const artists = await searchArtists("");
 
-    expect(artists).toEqual([]);
-    expect(spyOnGetRequest).not.toHaveBeenCalled();
+      expect(artists).toEqual([]);
+      expect(spyOnGetRequest).not.toHaveBeenCalled();
+    });
+
+    it("should get a list of artists for a search term", async () => {
+      const artists = await searchArtists("Kanye W");
+
+      expect(artists.length).toBeGreaterThan(0);
+      expect(artists[0].name).toEqual("Kanye West");
+
+      artists.forEach(assertIsArtist);
+    });
   });
 
-  it("should get a list of artists for a search term", async () => {
-    const artists = await searchArtists("Kanye W");
+  describe("getTopArtists", () => {
+    it("should get a list of the top artists", async () => {
+      const artists = await getTopArtists();
 
-    expect(artists.length).toBeGreaterThan(0);
-    expect(artists[0].name).toEqual("Kanye West");
-
-    artists.forEach(assertIsArtist);
+      artists.forEach(assertIsArtist);
+    });
   });
-});
 
-describe("getTopArtists", () => {
-  it("should get a list of the top artists", async () => {
-    const artists = await getTopArtists();
+  describe("getArtist", () => {
+    it("should get the artist for an ID", async () => {
+      const artistId = "5K4W6rqBFWDnAN6FQUkS6x";
 
-    artists.forEach(assertIsArtist);
-  });
-});
+      const artist = await getArtist(artistId);
 
-describe("getArtist", () => {
-  it("should get the artist for an ID", async () => {
-    const artistId = "5K4W6rqBFWDnAN6FQUkS6x";
-
-    const artist = await getArtist(artistId);
-
-    assertIsArtist(artist);
+      assertIsArtist(artist);
+    });
   });
 });

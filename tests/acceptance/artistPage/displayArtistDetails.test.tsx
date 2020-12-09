@@ -12,7 +12,7 @@ const artist = createFakeArtist();
 jest.spyOn(artistApi, "getArtist").mockResolvedValue(artist);
 jest.spyOn(nextRouter, "useRouter").mockReturnValue(({ query: { artistId: artist.id } } as unknown) as NextRouter);
 
-test("display top artists by default on homepage", async () => {
+test("display Artist information in Artist Detail page", async () => {
   render(<ArtistDetail />);
 
   await waitFor(() => {

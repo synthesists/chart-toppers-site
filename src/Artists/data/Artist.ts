@@ -1,8 +1,4 @@
-export type Image = {
-  url: string;
-  width: number;
-  height: number;
-};
+import { Image } from "../../data/Image";
 
 export type Artist = {
   name: string;

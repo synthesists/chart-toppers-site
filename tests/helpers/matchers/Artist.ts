@@ -1,12 +1,5 @@
-import { Artist, Image } from "../../../src/Artists/data/Artist";
-
-export const assertIsImage = (image: Image): void => {
-  expect(image).toEqual({
-    url: expect.any(String),
-    width: expect.any(Number),
-    height: expect.any(Number),
-  });
-};
+import { Artist } from "../../../src/Artists/data/Artist";
+import { assertIsImage } from "./Image";
 
 export const assertIsArtist = (artist: Artist): void => {
   expect(artist).toMatchObject({
@@ -14,5 +7,5 @@ export const assertIsArtist = (artist: Artist): void => {
     id: expect.any(String),
   });
 
-  artist.images.map(assertIsImage);
+  artist.images.forEach(assertIsImage);
 };
