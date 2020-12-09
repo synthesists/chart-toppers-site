@@ -16,7 +16,7 @@ test("display top artists by default on homepage", async () => {
 
   await waitFor(() => {
     const artistCard = screen.getByRole("link", { name: firstDefaultArtist.name });
-    expect(artistCard).toHaveAttribute("href", `/artists/${firstDefaultArtist.id}/chart`);
+    expect(artistCard).toHaveAttribute("href", `/artists/${firstDefaultArtist.id}`);
     expect(artistCard).toHaveTextContent(firstDefaultArtist.name);
   });
 });

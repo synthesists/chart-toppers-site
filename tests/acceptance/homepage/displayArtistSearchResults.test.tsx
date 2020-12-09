@@ -20,7 +20,7 @@ test("display artist search results for a search term and link to their page", a
 
   await waitFor(() => {
     const artistCard = screen.getByRole("link", { name: firstSearchResultArtist.name });
-    expect(artistCard).toHaveAttribute("href", `/artists/${firstSearchResultArtist.id}/chart`);
+    expect(artistCard).toHaveAttribute("href", `/artists/${firstSearchResultArtist.id}`);
     expect(artistCard).toHaveTextContent(firstSearchResultArtist.name);
   });
 });
