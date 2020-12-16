@@ -1,10 +1,10 @@
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
-import ArtistCard from "./ArtistCard";
-import { createFakeArtist } from "../../../tests/helpers/factories/Artist";
+import ArtistCard from ".";
+import { createFakeArtist } from "../../../../tests/helpers/factories/Artist";
 
 export default {
-  title: "Components",
+  title: "Components/Artist",
 };
 
 const ArtistCardStory: Story = () => {
@@ -22,4 +22,4 @@ const ArtistCardStory: Story = () => {
   );
 };
 
-export { ArtistCardStory as Artist };
+export { ArtistCardStory as Card };

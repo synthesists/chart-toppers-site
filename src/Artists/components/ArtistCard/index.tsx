@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Artist } from "../data/Artist";
+import { Artist } from "../../data/Artist";
 
 type Props = {
   artist: Artist;

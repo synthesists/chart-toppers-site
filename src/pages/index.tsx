@@ -6,7 +6,7 @@ import { searchArtists, getTopArtists } from "../Artists/api";
 import Input from "../elements/Input";
 import HeroBanner from "../components/HeroBanner";
 
-const Page: NextPage = () => {
+const Homepage: NextPage = () => {
   const [artists, setArtists] = useState<Artist[]>([]);
 
   useEffect(() => {
@@ -31,4 +31,4 @@ const Page: NextPage = () => {
   );
 };
 
-export default Page;
+export default Homepage;

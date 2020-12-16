@@ -4,4 +4,5 @@ export type Artist = {
   name: string;
   id: string;
   images: Image[];
+  genres: string[];
 };
