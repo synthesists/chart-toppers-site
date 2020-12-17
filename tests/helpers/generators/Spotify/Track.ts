@@ -15,4 +15,5 @@ export const generateTrack = fc.record({
   preview_url: fc.oneof(fc.constant(null), fc.webUrl()),
   artists: fc.array(generateArtist),
   album: generateAlbum,
+  weeksInTop100: fc.nat({ max: 100 }),
 });

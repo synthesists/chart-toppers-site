@@ -7,5 +7,6 @@ export const assertIsTrack = (track: Track): void => {
     previewUrl: expect.toBeSomeOf(expect.any(String), expect.toBeNull()),
     artistIds: expect.toBeArrayOf(expect.any(String)),
     albumId: expect.any(String),
+    weeksInTop100: expect.any(Number),
   });
 };

@@ -12,4 +12,5 @@ export const createFakeTrack = (): Track => ({
   previewUrl: generatePreviewUrl(),
   artistIds: [faker.random.uuid()],
   albumId: faker.random.uuid(),
+  weeksInTop100: faker.random.number(100),
 });

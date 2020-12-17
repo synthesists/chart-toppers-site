@@ -1,4 +1,3 @@
-import { GetTrack } from "..";
-import { createFakeTrack } from "../../../../tests/helpers/factories/Track";
+import { GetTracksForArtist } from "..";
 
-export const getTrack: GetTrack = async () => createFakeTrack();
+export const getTracksForArtist: GetTracksForArtist = async () => [];

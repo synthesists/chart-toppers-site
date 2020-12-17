@@ -4,4 +4,5 @@ export interface Track {
   previewUrl: string | null;
   artistIds: string[];
   albumId: string;
+  weeksInTop100: number;
 }
