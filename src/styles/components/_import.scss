@@ -4,5 +4,17 @@
   'artistHeroBanner';
 
 body {
-  font-family: sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 400;
+  src: local('Poppins Medium'), url(/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-weight: 600;
+  src: local('Poppins Bold'), url(/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
 }
