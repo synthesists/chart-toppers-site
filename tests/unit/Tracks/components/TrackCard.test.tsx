@@ -12,6 +12,12 @@ describe("TrackCard", () => {
     expect(screen.getByText(track.name)).toBeInTheDocument();
   });
 
+  it("should render the album name", () => {
+    render(<TrackCard track={track} />);
+
+    expect(screen.getByText(track.albumName)).toBeInTheDocument();
+  });
+
   it("should render the number of weeks a track was in top 100", () => {
     render(<TrackCard track={track} />);
 

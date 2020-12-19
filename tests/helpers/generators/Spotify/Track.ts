@@ -3,6 +3,7 @@ import { generateImage } from "./Image";
 
 const generateAlbum = fc.record({
   id: fc.string(),
+  name: fc.string(),
   images: fc.array(generateImage),
 });
 

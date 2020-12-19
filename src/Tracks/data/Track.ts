@@ -5,6 +5,7 @@ export interface Track {
   previewUrl: string | null;
   artistIds: string[];
   albumId: string;
+  albumName: string;
   weeksInTop100: number;
   images: Image[];
 }
