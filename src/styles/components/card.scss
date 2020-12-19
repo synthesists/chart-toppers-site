@@ -7,8 +7,12 @@
 
 .c-card {
   $self: &;
-  background-color: #EB9000;
+  background-color: #D4370B;
   position: relative;
+
+  &::after {
+    border: 20px solid #000;
+  }
 
   &--full {
     height: 220px;
@@ -60,6 +64,7 @@
   &--link {
     height: 120px;
     background-color: white;
+    overflow: hidden;
 
     display: grid;
     grid-template-columns: 120px 1fr;

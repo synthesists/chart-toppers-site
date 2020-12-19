@@ -5,6 +5,11 @@ body {
   margin: 0;
 }
 
-*:focus {
+*:focus:not(.focus-visible) {
   outline: none;
+}
+*.focus-visible {
+  border: 3px solid #d4370b;
+  outline: none;
+  margin: -3px;
 }
