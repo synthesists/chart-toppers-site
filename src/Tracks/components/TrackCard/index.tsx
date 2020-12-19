@@ -13,10 +13,11 @@ const TrackCard: React.FC<Props> = ({ track }: Props) => (
         {track.images.length > 0 && <img src={track.images[0].url} alt={track.name} />}
       </div>
       <div className="c-card__inner">
-        <div className="c-card__title">
-          <span>{track.name}</span>
-          <span>{track.weeksInTop100}</span>
-        </div>
+        <div className="c-card__title">{track.name}</div>
+        <div className="c-card__subtitle">{track.albumName}</div>
+      </div>
+      <div className="c-card__highlight">
+        <span>{track.weeksInTop100}</span>
       </div>
     </a>
   </Link>

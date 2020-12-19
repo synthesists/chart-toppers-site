@@ -7,6 +7,7 @@ export const mapToTrack = ({ id, name, artists, album, preview_url, weeksInTop10
   previewUrl: preview_url,
   artistIds: artists.map(({ id }: any) => id),
   albumId: album.id,
+  albumName: album.name,
   weeksInTop100,
   images: album.images.map(maptoImage),
 });
