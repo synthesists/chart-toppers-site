@@ -1,10 +1,15 @@
 @import 'components/import';
 
 body {
-  background-color: rgb(17, 2, 22);
+  background-color:#f5f5f5;
   margin: 0;
 }
 
-*:focus {
+*:focus:not(.focus-visible) {
   outline: none;
+}
+*.focus-visible {
+  border: 3px solid #d4370b;
+  outline: none;
+  margin: -3px;
 }

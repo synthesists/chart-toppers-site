@@ -1,6 +1,5 @@
 .heroBanner {
   $self: &;
-  background-color: rgb(17, 2, 22);
   padding: 25px;
 
   text-align: center;
@@ -10,7 +9,9 @@
 
   #{$self}__title {
     h2 {
-      color: white;
+      font-weight: 600;
+      font-size: 48px;
+      color: #D4370B;
     }    
   }
 
