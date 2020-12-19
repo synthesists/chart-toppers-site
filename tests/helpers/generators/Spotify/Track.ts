@@ -1,7 +1,9 @@
 import fc from "fast-check";
+import { generateImage } from "./Image";
 
 const generateAlbum = fc.record({
   id: fc.string(),
+  images: fc.array(generateImage),
 });
 
 const generateArtist = fc.record({

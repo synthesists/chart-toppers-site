@@ -8,9 +8,7 @@ import { createFakeArtist } from "../../helpers/factories/Artist";
 
 const firstSearchResultArtist = createFakeArtist();
 
-jest
-  .spyOn(artistApi, "searchArtists")
-  .mockResolvedValue([firstSearchResultArtist, createFakeArtist(), createFakeArtist(), createFakeArtist()]);
+jest.spyOn(artistApi, "searchArtists").mockResolvedValue([firstSearchResultArtist]);
 
 test("display artist search results for a search term and link to their page", async () => {
   render(<Homepage />);

@@ -1,4 +1,5 @@
 import { Track } from "../../../src/Tracks/data/Track";
+import { assertIsImage } from "./Image";
 
 export const assertIsTrack = (track: Track): void => {
   expect(track).toMatchObject({
@@ -9,4 +10,6 @@ export const assertIsTrack = (track: Track): void => {
     albumId: expect.any(String),
     weeksInTop100: expect.any(Number),
   });
+
+  track.images.forEach(assertIsImage);
 };

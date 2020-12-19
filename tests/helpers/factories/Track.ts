@@ -1,8 +1,9 @@
 import faker from "faker";
 import { Track } from "../../../src/Tracks/data/Track";
+import { createFakeImage } from "./Image";
 
 const generateName = () =>
-  `The ${faker.commerce.productAdjective} ${faker.commerce.product} from  ${faker.address.city}`;
+  `The ${faker.commerce.productAdjective()} ${faker.commerce.product()} from ${faker.address.city()}`;
 
 const generatePreviewUrl = () => faker.random.arrayElement([faker.internet.url(), null]);
 
@@ -13,4 +14,5 @@ export const createFakeTrack = (): Track => ({
   artistIds: [faker.random.uuid()],
   albumId: faker.random.uuid(),
   weeksInTop100: faker.random.number(100),
+  images: [createFakeImage(), createFakeImage()],
 });
