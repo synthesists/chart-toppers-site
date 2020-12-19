@@ -1,5 +1,5 @@
 import { Track } from "../data/Track";
-import { getTrack as getTrackFromSpotify } from "./adapters/Spotify";
+import { getTracksForArtist as getTracksForArtistFromSpotify } from "./adapters/Spotify";
 
-export type GetTrack = (id: string) => Promise<Track>;
-export const getTrack: GetTrack = getTrackFromSpotify;
+export type GetTracksForArtist = (artistId: string) => Promise<Track[]>;
+export const getTracksForArtist: GetTracksForArtist = getTracksForArtistFromSpotify;

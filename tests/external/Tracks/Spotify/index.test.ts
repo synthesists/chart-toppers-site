@@ -1,14 +1,14 @@
-import { getTrack } from "../../../../src/Tracks/api/adapters/Spotify";
+import { getTracksForArtist } from "../../../../src/Tracks/api/adapters/Spotify";
 import { assertIsTrack } from "../../../helpers/matchers/Track";
 
 describe("Spotify Track Adapter", () => {
-  describe("getTrack", () => {
-    it("should get the track for an ID", async () => {
-      const trackId = "5FbfZj2ZyTSu6RNeJ2Q0bj";
+  describe("getTracksForArtist", () => {
+    it("should get all tracks for an artist", async () => {
+      const artistId = "5K4W6rqBFWDnAN6FQUkS6x";
 
-      const track = await getTrack(trackId);
+      const tracks = await getTracksForArtist(artistId);
 
-      assertIsTrack(track);
+      tracks.forEach(assertIsTrack);
     });
   });
 });

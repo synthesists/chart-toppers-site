@@ -14,7 +14,8 @@ node_js:
   - 12
 
 stages:
-  - test unit
+  - name: test unit
+    if: (type == pull_request)
   - name: deploy-test
     if: (branch == main) AND (type == pull_request)
   - name: test-e2e
