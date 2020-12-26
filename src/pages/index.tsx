@@ -20,7 +20,10 @@ const Homepage: NextPage = () => {
   return (
     <>
       <HeroBanner>
-        <Input handleChange={handleInputChange} />
+        <Input handleChange={handleInputChange} placeholder="Search for your favourite artists..." />
+        <h4>
+          <span className="bold">Top searches: </span>Ed Sheeran, Kanye West, The Weeknd
+        </h4>
       </HeroBanner>
       <section role="list" className="card-grid">
         {artists.map((artist) => (

@@ -8,7 +8,7 @@ describe("Input", () => {
   const onChangeHandler = jest.fn();
 
   beforeEach(() => {
-    render(<Input handleChange={onChangeHandler} />);
+    render(<Input handleChange={onChangeHandler} placeholder="" />);
     const searchArtistInput = screen.getByRole("textbox");
 
     userEvent.type(searchArtistInput, textInput);
