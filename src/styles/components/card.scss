@@ -9,63 +9,83 @@ a {
   text-decoration: none;
 }
 .c-card {
+  
   $self: &;
-  background-color: #D4370B;
-  position: relative;
+  background-color: #fff;
+  width: 100%;
 
   &::after {
     border: 20px solid #000;
   }
 
   &--full {
-    height: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    
+
 
     #{$self}__inner {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
-      height: 100%;
+      height: 100px;
       display: flex;
-      align-items: flex-end;
-      background: linear-gradient(0deg,rgba(0,0,0,0.8),rgba(0,0,0,0.2));
+      align-items: center;
 
       box-sizing: border-box;
-      padding: 25px;
+      padding: 20px;
     }
 
     #{$self}__title {
-      color: white;
+      font-weight: 600;
+      color: #D4370B;
       font-size: 24px;
+      overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
     }
 
     #{$self}__image-container {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
       overflow: hidden;
+      display: inline-block;
+      position: relative;
 
+
+      #dummy {
+        margin-top: 100%;
+      }
+      
       img {
-        width: 100%;
-        height: 100%;
         transition: 0.25s ease-in;
-        object-fit: cover; 
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-height: 100%;
+        max-width: 100%;
+        object-fit: contain; 
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
     
     &:focus, &:hover {
       #{$self}__image-container {
         img {
-          transform: scale(1.05);
+          transform: translate(-50%, -50%) scale(1.05);
         }
       }
     }
   }
   
   &--link {
-    width: 440px;
+    min-width: 440px;
     max-height: 110px;
     overflow: hidden;
     padding: 10px;
