@@ -10,7 +10,10 @@ export default {
 const HeroBannerStory: Story = () => {
   return (
     <HeroBanner>
-      <Input handleChange={(s: string) => console.log(s)} />
+      <Input handleChange={(s: string) => console.log(s)} placeholder="Search for your favourite artists..." />
+      <h4>
+        <span className="bold">Top searches: </span>Ed Sheeran, Kanye West, The Weeknd
+      </h4>
     </HeroBanner>
   );
 };
