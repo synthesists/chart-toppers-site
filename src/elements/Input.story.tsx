@@ -7,7 +7,7 @@ export default {
 };
 
 const InputStory: Story = () => {
-  return <Input handleChange={(s: string) => console.log(s)} />;
+  return <Input handleChange={(s: string) => console.log(s)} placeholder="placeholder text" />;
 };
 
 export { InputStory as Input };
