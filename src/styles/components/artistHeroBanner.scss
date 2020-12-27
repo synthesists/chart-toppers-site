@@ -1,8 +1,11 @@
 .c-artist-hero {
   $self: &;
-  height: 480px;
   display: grid;
-  grid-template-columns: 40% auto;
+  grid-template-columns: 70% auto;
+  
+  @media only screen and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 
   #{$self}__inner {
     height: 100%;
@@ -23,6 +26,10 @@
   #{$self}__image-container {
     height: 100%;
     overflow: hidden;
+
+    @media only screen and (max-width: 800px) {
+      grid-row: 1;
+    }
 
     img {
       width: 100%;
