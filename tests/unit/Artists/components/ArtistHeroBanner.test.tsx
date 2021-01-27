@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import ArtistHeroBanner from "../../../../src/Artists/components/ArtistHeroBanner";
-import { createFakeArtist } from "../../../helpers/factories/Artist";
+import ArtistHeroBanner from "~modules/Artists/components/ArtistHeroBanner";
+import { createFakeArtist } from "tests/helpers/factories/Artist";
 
 const artist = createFakeArtist();
 

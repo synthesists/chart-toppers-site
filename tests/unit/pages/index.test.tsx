@@ -2,8 +2,8 @@ import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-import * as artistApi from "../../../src/Artists/api";
-import Homepage from "../../../src/pages";
+import * as artistApi from "~modules/Artists/api";
+import Homepage from "src/pages";
 
 const spyOnSearchArtists = jest.spyOn(artistApi, "searchArtists");
 const spyOnGetTopArtists = jest.spyOn(artistApi, "getTopArtists");

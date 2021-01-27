@@ -1,5 +1,5 @@
-import { getTracksForArtist } from "../../../../src/Tracks/api/adapters/Spotify";
-import { assertIsTrack } from "../../../helpers/matchers/Track";
+import { getTracksForArtist } from "~modules/Tracks/api/adapters/Spotify";
+import { assertIsTrack } from "tests/helpers/matchers/Track";
 
 describe("Spotify Track Adapter", () => {
   describe("getTracksForArtist", () => {

@@ -1,14 +1,14 @@
 import React from "react";
 import { render, waitFor } from "@testing-library/react";
 
-import * as artistsApi from "../../../../src/Artists/api";
-import * as tracksApi from "../../../../src/Tracks/api";
-import ArtistDetail from "../../../../src/pages/artists/[artistId]";
-import { createFakeArtist } from "../../../helpers/factories/Artist";
-import * as ArtistHeroBanner from "../../../../src/Artists/components/ArtistHeroBanner";
-import * as TrackCardsContainer from "../../../../src/Tracks/components/TrackCardsContainer";
-import { mockNextRouter } from "../../../helpers/mocks/NextRouter";
-import { createFakeTrack } from "../../../helpers/factories/Track";
+import * as artistsApi from "~modules/Artists/api";
+import * as tracksApi from "~modules/Tracks/api";
+import ArtistDetail from "src/pages/artists/[artistId]";
+import { createFakeArtist } from "tests/helpers/factories/Artist";
+import * as ArtistHeroBanner from "~modules/Artists/components/ArtistHeroBanner";
+import * as TrackCardsContainer from "~modules/Tracks/components/TrackCardsContainer";
+import { mockNextRouter } from "tests/helpers/mocks/NextRouter";
+import { createFakeTrack } from "tests/helpers/factories/Track";
 
 const artist = createFakeArtist();
 const tracks = [createFakeTrack()];

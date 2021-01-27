@@ -1,5 +1,5 @@
 import faker from "faker";
-import { Track } from "../../../src/Tracks/data/Track";
+import { Track } from "~modules/Tracks/data/Track";
 import { createFakeImage } from "./Image";
 
 const generateName = () =>

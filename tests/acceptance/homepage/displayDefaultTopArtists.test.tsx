@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 
-import * as artistApi from "../../../src/Artists/api";
-import Homepage from "../../../src/pages";
+import * as artistApi from "~modules/Artists/api";
+import Homepage from "src/pages";
 import { createFakeArtist } from "../../helpers/factories/Artist";
 
 const firstDefaultArtist = createFakeArtist();

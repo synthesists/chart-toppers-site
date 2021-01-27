@@ -28,4 +28,9 @@ module.exports = {
     "^.+\\.(ts|tsx)$": "ts-jest",
   },
   modulePathIgnorePatterns: ["<rootDir>/.*/__mocks__"],
+  moduleNameMapper: {
+    "~modules/(.*)": "<rootDir>/src/modules/$1",
+    "src/(.*)": "<rootDir>/src/$1",
+    "tests/(.*)": "<rootDir>/tests/$1",
+  },
 };

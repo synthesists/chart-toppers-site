@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { NextPage } from "next";
-import { getArtist } from "../../Artists/api";
+import { getArtist } from "~modules/Artists/api";
 import { useRouter } from "next/router";
-import { Artist } from "../../Artists/data/Artist";
-import ArtistHeroBanner from "../../Artists/components/ArtistHeroBanner";
-import { Track } from "../../Tracks/data/Track";
-import { getTracksForArtist } from "../../Tracks/api";
-import TrackCardsContainer from "../../Tracks/components/TrackCardsContainer";
+import { Artist } from "~modules/Artists/data/Artist";
+import ArtistHeroBanner from "~modules/Artists/components/ArtistHeroBanner";
+import { Track } from "~modules/Tracks/data/Track";
+import { getTracksForArtist } from "~modules/Tracks/api";
+import TrackCardsContainer from "~modules/Tracks/components/TrackCardsContainer";
 
 const ArtistDetail: NextPage = () => {
   const router = useRouter();
