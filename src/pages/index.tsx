@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { NextPage } from "next";
-import { Artist } from "../Artists/data/Artist";
-import ArtistCard from "../Artists/components/ArtistCard";
-import { searchArtists, getTopArtists } from "../Artists/api";
-import Input from "../elements/Input";
-import HeroBanner from "../components/HeroBanner";
+import { Artist } from "~modules/Artists/data/Artist";
+import ArtistCard from "~modules/Artists/components/ArtistCard";
+import { searchArtists, getTopArtists } from "~modules/Artists/api";
+import Input from "../modules/common/components/Input";
+import HeroBanner from "~modules/common/components/HeroBanner";
 
 const Homepage: NextPage = () => {
   const [artists, setArtists] = useState<Artist[]>([]);

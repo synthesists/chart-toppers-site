@@ -1,4 +1,4 @@
-import { Track } from "../../../src/Tracks/data/Track";
+import { Track } from "~modules/Tracks/data/Track";
 import { assertIsImage } from "./Image";
 
 export const assertIsTrack = (track: Track): void => {

@@ -1,7 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import React from "react";
-import Input from "../../../src/elements/Input";
+import Input from "src/modules/common/components/Input";
 
 describe("Input", () => {
   const textInput = "This is some text";

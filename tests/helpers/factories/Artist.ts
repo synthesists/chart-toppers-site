@@ -1,5 +1,5 @@
 import faker from "faker";
-import { Artist } from "../../../src/Artists/data/Artist";
+import { Artist } from "~modules/Artists/data/Artist";
 import { createFakeImage } from "./Image";
 
 const musicGenres = ["rap", "pop", "rock", "jazz", "R&B", "folk", "classical", "EDM"];

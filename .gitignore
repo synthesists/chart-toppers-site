@@ -9,3 +9,4 @@ coverage
 *.log
 .serverless
 .serverless_nextjs
+tests/e2e/cypress/screenshots

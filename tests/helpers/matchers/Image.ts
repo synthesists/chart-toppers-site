@@ -1,4 +1,4 @@
-import { Image } from "../../../src/data/Image";
+import { Image } from "~modules/common/data/Image";
 
 export const assertIsImage = (image: Image): void => {
   expect(image).toEqual({

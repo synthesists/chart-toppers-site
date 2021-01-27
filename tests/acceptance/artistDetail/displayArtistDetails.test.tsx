@@ -1,12 +1,12 @@
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 
-import * as artistsApi from "../../../src/Artists/api";
-import * as tracksApi from "../../../src/Tracks/api";
-import ArtistDetail from "../../../src/pages/artists/[artistId]";
+import * as artistsApi from "~modules/Artists/api";
+import * as tracksApi from "~modules/Tracks/api";
 import { createFakeArtist } from "../../helpers/factories/Artist";
 import { mockNextRouter } from "../../helpers/mocks/NextRouter";
 import { createFakeTrack } from "../../helpers/factories/Track";
+import ArtistDetail from "src/pages/artists/[artistId]";
 
 const artist = createFakeArtist();
 const track = createFakeTrack();

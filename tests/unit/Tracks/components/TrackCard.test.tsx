@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import { createFakeTrack } from "../../../helpers/factories/Track";
-import TrackCard from "../../../../src/Tracks/components/TrackCard";
+import { createFakeTrack } from "tests/helpers/factories/Track";
+import TrackCard from "~modules/Tracks/components/TrackCard";
 
 const track = createFakeTrack();
 

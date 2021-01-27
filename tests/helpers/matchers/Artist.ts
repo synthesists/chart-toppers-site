@@ -1,4 +1,4 @@
-import { Artist } from "../../../src/Artists/data/Artist";
+import { Artist } from "~modules/Artists/data/Artist";
 import { assertIsImage } from "./Image";
 
 export const assertIsArtist = (artist: Artist): void => {

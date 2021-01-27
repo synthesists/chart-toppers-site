@@ -1,8 +1,8 @@
 import fc from "fast-check";
-import { mapToArtist } from "../../../../../../src/Artists/api/adapters/Spotify/mapToArtist";
-import { Artist } from "../../../../../../src/Artists/data/Artist";
-import { generateArtist } from "../../../../../helpers/generators/Spotify/Artist";
-import { assertIsArtist } from "../../../../../helpers/matchers/Artist";
+import { mapToArtist } from "~modules/Artists/api/adapters/Spotify/mapToArtist";
+import { Artist } from "~modules/Artists/data/Artist";
+import { generateArtist } from "tests/helpers/generators/Spotify/Artist";
+import { assertIsArtist } from "tests/helpers/matchers/Artist";
 
 describe("mapToArtist", () => {
   it("should map each generated Spotify artist to an Artist", () => {
