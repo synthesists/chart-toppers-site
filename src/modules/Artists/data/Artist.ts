@@ -1,4 +1,4 @@
-import { Image } from "../../common/data/Image";
+import { Image } from "@modules/common/data/Image";
 
 export type Artist = {
   name: string;
