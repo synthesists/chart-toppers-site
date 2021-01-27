@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NextPage } from "next";
+
 import { Artist } from "~modules/Artists/data/Artist";
 import ArtistCard from "~modules/Artists/components/ArtistCard";
 import { searchArtists, getTopArtists } from "~modules/Artists/api";
