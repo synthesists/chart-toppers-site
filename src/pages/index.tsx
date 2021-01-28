@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { NextPage } from "next";
+import Head from "next/head";
 
 import { Artist } from "~modules/Artists/data/Artist";
 import ArtistCard from "~modules/Artists/components/ArtistCard";
@@ -20,6 +21,9 @@ const Homepage: NextPage = () => {
 
   return (
     <>
+      <Head>
+        <title>Chart Toppers</title>
+      </Head>
       <HeroBanner>
         <Input handleChange={handleInputChange} placeholder="Search for your favourite artists..." />
         <h4>
