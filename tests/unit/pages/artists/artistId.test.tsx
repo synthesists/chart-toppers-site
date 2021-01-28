@@ -9,6 +9,7 @@ import * as ArtistHeroBanner from "~modules/Artists/components/ArtistHeroBanner"
 import * as TrackCardsContainer from "~modules/Tracks/components/TrackCardsContainer";
 import { mockNextRouter } from "tests/helpers/mocks/NextRouter";
 import { createFakeTrack } from "tests/helpers/factories/Track";
+import { renderAct } from "tests/helpers/utils/render-act";
 
 const artist = createFakeArtist();
 const tracks = [createFakeTrack()];
@@ -21,27 +22,26 @@ const spyOnTrackCardsContainer = jest.spyOn(TrackCardsContainer, "default");
 
 describe("artistDetail", () => {
   it("should get the artist", async () => {
-    render(<ArtistDetail />);
+    await renderAct(<ArtistDetail />);
 
-    await waitFor(() => {
-      expect(spyOnGetArtist).toHaveBeenCalledWith(artist.id);
-    });
+    expect(spyOnGetArtist).toHaveBeenCalledWith(artist.id);
   });
 
   it("should render an Artist HeroBanner", async () => {
-    render(<ArtistDetail />);
+    await renderAct(<ArtistDetail />);
 
-    await waitFor(() => {
-      expect(spyOnArtistHeroBanner).toHaveBeenCalledWith({ artist }, expect.anything());
-    });
+    expect(spyOnArtistHeroBanner).toHaveBeenCalledWith({ artist }, expect.anything());
+  });
+
+  it("should get the tracks for the artist", async () => {
+    await renderAct(<ArtistDetail />);
+
+    expect(spyOnGetTracksForArtist).toHaveBeenCalledWith(artist.id);
   });
 
   it("should render a TrackCardsContainer", async () => {
-    render(<ArtistDetail />);
+    await renderAct(<ArtistDetail />);
 
-    await waitFor(() => {
-      expect(spyOnGetTracksForArtist).toHaveBeenCalledWith(artist.id);
-      expect(spyOnTrackCardsContainer).toHaveBeenCalledWith({ tracks }, expect.anything());
-    });
+    expect(spyOnTrackCardsContainer).toHaveBeenCalledWith({ tracks }, expect.anything());
   });
 });
