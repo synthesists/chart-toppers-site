@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
 import TrackCard from ".";
-import { createFakeTrack } from "tests/helpers/factories/Track";
+import { createFakeTrack } from "../../../../../tests/helpers/factories/Track";
 
 export default {
   title: "Components/Track",
@@ -9,11 +9,7 @@ export default {
 
 const TrackCardStory: Story = () => {
   return (
-    <section role="list" className="card-grid">
-      <TrackCard track={createFakeTrack()} />
-      <TrackCard track={createFakeTrack()} />
-      <TrackCard track={createFakeTrack()} />
-      <TrackCard track={createFakeTrack()} />
+    <section role="list" className="track-card-grid">
       <TrackCard track={createFakeTrack()} />
       <TrackCard track={createFakeTrack()} />
       <TrackCard track={createFakeTrack()} />

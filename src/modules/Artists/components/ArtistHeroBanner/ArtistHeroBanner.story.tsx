@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
 import ArtistHeroBanner from ".";
-import { createFakeArtist } from "tests/helpers/factories/Artist";
+import { createFakeArtist } from "../../../../../tests/helpers/factories/Artist";
 
 export default {
   title: "Components/Artist",
