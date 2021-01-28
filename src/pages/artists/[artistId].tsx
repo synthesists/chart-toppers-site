@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { NextPage } from "next";
-import { useRouter } from "next/router";
+import { GetServerSidePropsContext, NextPage } from "next";
+import Head from "next/head";
+import { ParsedUrlQuery } from "querystring";
 
 import { getArtist } from "~modules/Artists/api";
 import { Artist } from "~modules/Artists/data/Artist";
@@ -9,22 +10,24 @@ import { Track } from "~modules/Tracks/data/Track";
 import { getTracksForArtist } from "~modules/Tracks/api";
 import TrackCardsContainer from "~modules/Tracks/components/TrackCardsContainer";
 
-const ArtistDetail: NextPage = () => {
-  const router = useRouter();
-  const [artist, setArtist] = useState<Artist | null>(null);
+type Props = {
+  artist: Artist | null;
+};
+
+const ArtistDetail: NextPage<Props> = ({ artist }: Props) => {
   const [tracks, setTracks] = useState<Track[]>([]);
 
-  const { artistId } = router.query;
-
   useEffect(() => {
-    if (artistId) {
-      getArtist(artistId as string).then(setArtist);
-      getTracksForArtist(artistId as string).then(setTracks);
+    if (artist) {
+      getTracksForArtist(artist.id).then(setTracks);
     }
-  }, [artistId]);
+  }, [artist]);
 
   return (
     <>
+      <Head>
+        <title>{`${artist?.name ?? "artist page"} | Chart Toppers`}</title>
+      </Head>
       <ArtistHeroBanner artist={artist} />
       <TrackCardsContainer tracks={tracks} />
     </>
@@ -32,3 +35,13 @@ const ArtistDetail: NextPage = () => {
 };
 
 export default ArtistDetail;
+
+export const getServerSideProps = async (
+  context: GetServerSidePropsContext<ParsedUrlQuery>
+): Promise<{ props: Props }> => {
+  const { artistId } = context.query;
+
+  const artist = await getArtist(artistId as string);
+
+  return { props: { artist } };
+};
