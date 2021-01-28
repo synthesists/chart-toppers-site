@@ -1,7 +1,7 @@
 import React from "react";
 import { Story } from "@storybook/react/types-6-0";
 import TrackCardsContainer from "./TrackCardsContainer";
-import { createFakeTrack } from "tests/helpers/factories/Track";
+import { createFakeTrack } from "../../../../../tests/helpers/factories/Track";
 
 export default {
   title: "Components/Track",

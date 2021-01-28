@@ -9,5 +9,7 @@ import { Track } from "~modules/Tracks/data/Track";
 export const getTracksForArtist: GetTracksForArtist = async (artistId: string): Promise<Track[]> => {
   const url = URI(SPOTIFY_API_URL).segment("artists").segment(artistId).segment("tracks").toString();
   const { data } = await Axios.get(url);
-  return data.map(mapToTrack);
+  const tracks: Track[] = data.map(mapToTrack);
+
+  return tracks.sort((a, b) => b.weeksInTop100 - a.weeksInTop100);
 };

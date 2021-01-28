@@ -7,7 +7,7 @@ type Props = {
 };
 
 const TrackCardsContainer: FC<Props> = ({ tracks }: Props) => (
-  <section role="list" className="card-grid">
+  <section role="list" className="track-card-grid">
     {tracks.map((track) => (
       <TrackCard track={track} key={track.id} />
     ))}
