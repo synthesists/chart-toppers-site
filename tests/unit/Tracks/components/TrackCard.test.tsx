@@ -27,6 +27,6 @@ describe("TrackCard", () => {
   it("should render the album image for a track", () => {
     render(<TrackCard track={track} />);
 
-    expect(screen.getByRole("img")).toHaveAttribute("src", track.images[0].url);
+    expect(screen.getByRole("img")).toHaveAttribute("src", track.images[1].url);
   });
 });

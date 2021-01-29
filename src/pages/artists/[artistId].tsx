@@ -14,8 +14,19 @@ type Props = {
   artist: Artist | null;
 };
 
+const createEmptyTrack = (id: string): Track => ({
+  id,
+  name: "loading",
+  images: [],
+  previewUrl: null,
+  artistIds: [],
+  albumId: "",
+  albumName: "still loading",
+  weeksInTop100: -1,
+});
+
 const ArtistDetail: NextPage<Props> = ({ artist }: Props) => {
-  const [tracks, setTracks] = useState<Track[]>([]);
+  const [tracks, setTracks] = useState<Track[]>([createEmptyTrack("1"), createEmptyTrack("2"), createEmptyTrack("3")]);
 
   useEffect(() => {
     if (artist) {
